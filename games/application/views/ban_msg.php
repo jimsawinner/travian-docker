@@ -1,1 +1,0 @@
-<?=yubnd?> <b><a href='nachrichten.php?t=1&id=6'>Admin</a></b>
