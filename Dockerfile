@@ -16,11 +16,5 @@ WORKDIR /var/www/html
 # Ensure proper permissions for the web directory
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
-# Copy the custom Apache configuration
-COPY ./web/000-default.conf /etc/apache2/sites-available/000-default.conf
-
-# Copy web files from your repository to Apache root
-COPY ./web/ /var/www/html/
-
 # Start Apache
 CMD ["apache2-foreground"]
